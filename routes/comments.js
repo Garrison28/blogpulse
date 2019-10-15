@@ -10,29 +10,8 @@ router.get('/posts/:id', function(req, res) {
         .then(function(comment) {
             console.log(post.comment)
             res.render('posts/show', { comment });
-            // post.getComments().then(function(comments) {
-            //     res.render(`posts/${post.id}`, {post, comments})
-            // })
         })
 })
-
-// router.post('/:id/comments', function(req, res) {
-//     db.post.findByPk(parseInt(req.params.id))
-//         .then(function(post) {
-//             post.createComment(req.body).then(function(comment) {
-//                 res.redirect(`posts/${post.id}`)
-//             })
-//         })
-// })
-
-// router.get('/:id/comments', function(req, res) {
-//     db.post.findByPk(parseInt(req.params.id))
-//         .then(function(post) {
-//             post.getComment().then(function(comment) {
-//                 res.render('posts/show', {post, comment})
-//             })
-//         })
-// });
 
 
 

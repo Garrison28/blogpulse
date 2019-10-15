@@ -18,14 +18,6 @@ router.get('/:id', function (req, res) {
             });
         });
 });
-// router.get('/:id/comments', function(req, res) {
-//     db.post.findByPk(parseInt(req.params.id))
-//         .then(function(post) {
-//             post.getComments().then(function(comments) {
-//                 res.render(`posts/${post.id}`, {post, comments})
-//             })
-//         })
-// })
 
 router.post('/:id/comments', function(req, res) {
     console.log(req.params.id)
