@@ -4,3 +4,23 @@
 
 <p><%= post.content %></p>
 
+<hr>
+
+<h1>Comments</h1>
+
+
+<h2>Comment on this Post</h2>
+
+
+<form method="POST" action="/posts/<%= post.id %>/comments">
+    <input type="text" name="name" id="name" placeholder="name">name
+    <input type="text" name="content" id="comment" placeholder="write your comment here">
+    <input type="submit" value="add comment">
+</form>
+
+<% comments.forEach(function(comment) { %>
+    <p><%= comment.name %></p>
+    <p><%= comment.content %></p>
+<% }) %>
+
+
